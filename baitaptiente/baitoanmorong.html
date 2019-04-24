@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input id="Nhaplan1" type="number"/>
+    <input id="Nhaplan2" type="number"/>
+    <br/>
+    <br/>
+    <button type="button" value="cong" onclick="Addition(this.value)">Addition(+)</button>
+    <button type="button" value="tru" onclick="Addition(this.value)">Subtraction(-)</button>
+    <button type="button" value="nhan" onclick="Addition(this.value)">Multiplication(X)</button>
+    <button type="button" value="chia" onclick="Addition(this.value)">Division(/)</button>
+</form>
+Result: <span id="result"></span>
+<script>
+
+    function Addition(value) {
+        let nhaplan1 = parseInt(document.getElementById("Nhaplan1").value);
+        let nhaplan2 = parseInt(document.getElementById("Nhaplan2").value);
+        if (value==="cong") {
+            let ketquacong = nhaplan1 + nhaplan2;
+            document.getElementById("result").innerHTML = ketquacong;
+        }
+        if (value==="tru") {
+            let ketquatru = nhaplan1 + nhaplan2;
+            document.getElementById("result").innerHTML = ketquatru;
+        }
+        if (value==="nhan") {
+            let ketquanhan = nhaplan1 + nhaplan2;
+            document.getElementById("result").innerHTML = ketquanhan;
+        }
+        if (value==="chia") {
+            let ketquachia = nhaplan1 + nhaplan2;
+            document.getElementById("result").innerHTML = ketquachia;
+        }
+    }
+</body>
+</html>
