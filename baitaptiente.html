@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td > Amount <td/>
+            <td > From Currency <td/>
+            <td > To currency <td/>
+        <tr/>
+        <tr>
+            <td > <input id="nhaptien" type="number"/></td>
+
+            <td >
+                <select id="tiente1" >
+                    <option value="VND" >VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+
+            <td >
+                <select id="tiente2">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick= "hamdoi()"> Convert </button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+Result: <span id="result"></span>
+<script>
+    function hamdoi() {
+        let nhaptien = document.getElementById("nhaptien").value;
+        let tiente1=document.getElementById("tiente1").value;
+        let tiente2=document.getElementById("tiente2").value;
+        let result;
+        if(tiente1==="VND" && tiente2==="USD"){
+            result = 23000*nhaptien;
+        }
+        else if(tiente1==="USD" && tiente2==="VND"){
+            result = nhaptien/23000;
+        }
+        else{
+            result = nhaptien;}
+        document.getElementById("result").innerHTML=result;
+    }
+</script>
+</body>
+</html>
